@@ -22,6 +22,16 @@ const house = housesData.find((house) => {
   return house.id === parseInt(id);
 });
 
+const onClick = () =>{
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const body = document.getElementById('body').value;
+  console.log(name);
+  console.log(email);
+  console.log(body);
+  
+}
+
   return (
   <section>
     <div className='container mx-auto min-h-[800px] mb-14'>
@@ -32,16 +42,16 @@ const house = housesData.find((house) => {
       </div>
       <div className='mb-4 lg:-0 flex gap-x-2 text-sm'>
         <div className='bg-green-500 text-white px-3 rounded-full'>{house.type}</div>
-        <div className='bg-violet-500 text-white px-3 rounded-full'>{house.country}</div>
+        <div className='bg-red-500 text-white px-3 rounded-full'>{house.country}</div>
       </div>
-      <div className='text-3xl font-semibold text-violet-600'>${new Intl.NumberFormat().format(house.price)}</div>
+      <div className='text-3xl font-semibold text-red-500'>${new Intl.NumberFormat().format(house.price)}</div>
     </div>
     <div className='flex flex-col items-start gap-8 lg:flex-row'>
       <div className='max-w-[768px]'>
         <div className='mb-8'>
           <img src={house.imageLg} alt=''/>
         </div>
-        <div className='flex gap-x-6 text-violet-700 mb-6'>
+        <div className='flex gap-x-6 text-red-500 mb-6'>
           <div className='flex gap-x-2 items-center'>
             <BiBed className='text-2xl'/>
             <div>{house.bedrooms}</div>
@@ -64,20 +74,25 @@ const house = housesData.find((house) => {
           </div>
           <div>
             <div className='font-bold text-lg'>{house.agent.name}</div>
-            <Link to='' className='text-violet-700 text-sm'>
+            <Link to='' className='text-red-500 text-sm'>
               View Listings
             </Link>
           </div>
         </div>
         {/* form */}
         <form className='flex flex-col gap-y-4'>
-          <input className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-14 text-sm' type='text' placeholder='Name*'/>
-          <input className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-14 text-sm' type='text' placeholder='Email*'/>
-          <input className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-14 text-sm' type='text' placeholder='Phone'/>
-          <textarea className='border border-gray-300 focus:border-violet-700 outline-none resize-none rounded w-full p-4 h-36 text-sm text-gray-400' placeholder='Message*' defaultValue='Hello, I am interested in [Modern apartment]'></textarea>
+          <input className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-14 text-sm' type='text' placeholder='Name*' id='name'/>
+          <input className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-14 text-sm' type='text' placeholder='Email*' id='email'/>
+          {/* <input className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-14 text-sm' type='text' placeholder='Phone' id='phone'/> */}
+          <textarea className='border border-gray-300 focus:border-violet-700 outline-none resize-none rounded w-full p-4 h-36 text-sm text-gray-400' placeholder='Message*' defaultValue='Hello, I am interested in [Modern apartment]' id='body' onKeyUp={()=> onClick()}></textarea>
+          <div className="flex flex-col m-auto justify-center items-center">
+          <label>-OR-</label>
+          <p className="text-sm text-gray-500">Message us directly at email@example.com</p>
+          
+          </div>
           <div className='flex gap-x-2'>
-            <button className='bg-violet-700 hover:bg-violet-800 text-white rounded p-4 text-sm w-full transition'>Send message</button>
-            <button className='border border-violet-700 text-violet-700 hover:border-violet-500 hover:text-violet-500 rounded p-4 text-sm w-full transition'>Call</button>
+            <Link className='bg-red-500 hover:bg-red-600 text-white rounded p-4 text-sm w-full transition' to="mailto:preciousaffiah205@gmail.com?subject='Hello from Abstract!'&body='Just popped in to say hello'">Send message</Link>
+            <button className='border border-red-500 text-red-500 hover:border-red-400 hover:text-red-400 rounded p-4 text-sm w-full transition'>Call</button>
           </div>
         </form>
       </div>
