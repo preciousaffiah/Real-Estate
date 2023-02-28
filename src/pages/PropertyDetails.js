@@ -80,7 +80,7 @@ const onClick = () =>{
           </div>
         </div>
         {/* form */}
-        {/* <form className='flex flex-col gap-y-4'>
+        <form className='flex flex-col gap-y-4'>
           <input className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-14 text-sm' type='text' placeholder='Name*' id='name'/>
           <input className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-14 text-sm' type='text' placeholder='Email*' id='email'/>
           <input className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-14 text-sm' type='text' placeholder='Phone' id='phone'/>
@@ -92,18 +92,19 @@ const onClick = () =>{
           </div>
           <div className='flex gap-x-2'>
             <Link className='bg-red-500 hover:bg-red-600 text-white rounded p-4 text-sm w-full transition' to="mailto:preciousaffiah205@gmail.com?subject='I am interested in buying a house'&body={body}" id='msg'>Send message</Link>
-            <a href="mailto:`{email}`?subject={subject}&body={body}" id='msg'>Click to Send an Email</a>
             <button className='border border-red-500 text-red-500 hover:border-red-400 hover:text-red-400 rounded p-4 text-sm w-full transition'>Call</button>
           </div>
-        </form> */}
-
-        <form action="mailto:you@yourdmainhere.com" method="post" enctype="text/plain">
-        <label>name</label>
-          <input type="text" name="FirstName"/>
-        <label>email</label>
-        <input type="text" name="Email"/>
-          <input type="submit" name="submit" value="Submit"/>
         </form>
+
+<div>
+<form action="mailto:preciousaffiah205@gmail.com.com" method="post" enctype="text/plain" className="bg-green-300 w-full flex flex-col">
+          <label>name</label>
+            <input type="text" name="FirstName"/>
+          <label>email</label>
+          <input type="text" name="Email"/>
+            <input type="submit" name="submit" value="Submit"/>
+        </form>
+</div>
       
       </div>
     </div>
