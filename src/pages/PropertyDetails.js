@@ -23,12 +23,12 @@ const house = housesData.find((house) => {
 });
 
 const onClick = () =>{
-  const name = document.getElementById('name').value;
+  const msg = document.getElementById('msg');
   const email = document.getElementById('email').value;
   const body = document.getElementById('body').value;
-  console.log(name);
-  console.log(email);
-  console.log(body);
+  console.log(msg);
+  // console.log(email);
+  // console.log(body);
   
 }
 
@@ -80,10 +80,10 @@ const onClick = () =>{
           </div>
         </div>
         {/* form */}
-        <form className='flex flex-col gap-y-4'>
+        {/* <form className='flex flex-col gap-y-4'>
           <input className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-14 text-sm' type='text' placeholder='Name*' id='name'/>
           <input className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-14 text-sm' type='text' placeholder='Email*' id='email'/>
-          {/* <input className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-14 text-sm' type='text' placeholder='Phone' id='phone'/> */}
+          <input className='border border-gray-300 focus:border-violet-700 outline-none rounded w-full px-4 h-14 text-sm' type='text' placeholder='Phone' id='phone'/>
           <textarea className='border border-gray-300 focus:border-violet-700 outline-none resize-none rounded w-full p-4 h-36 text-sm text-gray-400' placeholder='Message*' defaultValue='Hello, I am interested in [Modern apartment]' id='body' onKeyUp={()=> onClick()}></textarea>
           <div className="flex flex-col m-auto justify-center items-center">
           <label>-OR-</label>
@@ -91,10 +91,20 @@ const onClick = () =>{
           
           </div>
           <div className='flex gap-x-2'>
-            <Link className='bg-red-500 hover:bg-red-600 text-white rounded p-4 text-sm w-full transition' to="mailto:preciousaffiah205@gmail.com?subject='Hello from Abstract!'&body='Just popped in to say hello'">Send message</Link>
+            <Link className='bg-red-500 hover:bg-red-600 text-white rounded p-4 text-sm w-full transition' to="mailto:preciousaffiah205@gmail.com?subject='I am interested in buying a house'&body={body}" id='msg'>Send message</Link>
+            <a href="mailto:`{email}`?subject={subject}&body={body}" id='msg'>Click to Send an Email</a>
             <button className='border border-red-500 text-red-500 hover:border-red-400 hover:text-red-400 rounded p-4 text-sm w-full transition'>Call</button>
           </div>
+        </form> */}
+
+        <form action="mailto:you@yourdmainhere.com" method="post" enctype="text/plain">
+        <label>name</label>
+          <input type="text" name="FirstName"/>
+        <label>email</label>
+        <input type="text" name="Email"/>
+          <input type="submit" name="submit" value="Submit"/>
         </form>
+      
       </div>
     </div>
     </div>
