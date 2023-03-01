@@ -11,13 +11,16 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import PropertyDetails from './pages/PropertyDetails';
 import Properties from './pages/Properties';
+import Contact from './pages/Contact';
+import Navbar from './components/Navbar';
 
 const App = () => {
   return <div className='max-w-[1440px] mx-auto bg-white'>
-    <Header/>
+    <Navbar/>
     <Routes>
       <Route path='/' element={<Home/>} />
       <Route path='/properties' element={<Properties/>} />
+      <Route path='/contact' element={<Contact/>} />
       <Route path='/property/:id' element={<PropertyDetails/>} />
     </Routes>
     <Footer/>

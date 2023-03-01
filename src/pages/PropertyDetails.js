@@ -37,7 +37,7 @@ const onClick = () =>{
     <div className='container mx-auto min-h-[800px] mb-14'>
     <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between'>
       <div>
-        <h2 className='text-2xl font-semibold'>{house.name}</h2>
+        {/* <h2 className='text-2xl font-semibold'>{house.name}</h2> */}
         <h3 className='text-lg mb-4'>{house.address}</h3>
       </div>
       <div className='mb-4 lg:-0 flex gap-x-2 text-sm'>
@@ -95,16 +95,6 @@ const onClick = () =>{
             <button className='border border-red-500 text-red-500 hover:border-red-400 hover:text-red-400 rounded p-4 text-sm w-full transition'>Call</button>
           </div>
         </form>
-
-<div>
-<form action="mailto:preciousaffiah205@gmail.com.com" method="post" enctype="text/plain" className="bg-green-300 w-full flex flex-col">
-          <label>name</label>
-            <input type="text" name="FirstName"/>
-          <label>email</label>
-          <input type="text" name="Email"/>
-            <input type="submit" name="submit" value="Submit"/>
-        </form>
-</div>
       
       </div>
     </div>

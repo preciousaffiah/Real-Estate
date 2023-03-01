@@ -6,9 +6,9 @@ const Footer = () => {
   const year = newDate.getFullYear();
   // year.getFullYear();
 
-  return <footer className='bg-black py-8 text-center text-white'>
+  return <footer className='bg-red-800 py-8 text-center text-white'>
     <div className='container mx-auto'>
-      Copyright &copy; {year}. All rights reserved
+      Copyright &copy; {year} Homely. All rights reserved
     </div>
   </footer>;
 };
