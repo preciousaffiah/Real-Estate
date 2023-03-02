@@ -42,7 +42,9 @@ const Home = () => {
         <h1 className='text-4xl lg:text-[58px] font-sem
          leading-none mb-6'><span className='text-red-500'>Buy</span> Your Dream House From Us.</h1>
         <p className='max-w-[480px] mb-8'>
-          lorem Labore id eiusmod magna excepteur enim adipisicing pariatur. Nulla sit aute magna laborum dolore quis. Non ad laborum excepteur nostrud minim consequat ex adipisicing fugiat enim duis aute fugiat ea. Amet veniam officia ipsum minim. Velit est ad pariatur reprehenderit Lorem est elit culpa eiusmod pariatur dolore proident.
+        Welcome to my Casa Reality! Our company is a well-established player in the real estate industry.
+        We have a portfolio of properties that includes residential, commercial, and industrial properties,  
+        We also have a team of experienced and dedicated professionals who are committed to delivering results for our clients.  
         </p>
       </div>
       {/* image */}
