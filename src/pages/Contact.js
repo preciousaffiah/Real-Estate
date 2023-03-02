@@ -35,7 +35,7 @@ const onClick = () =>{
 
   return (
   <section>
-    <div className='container mx-auto min-h-fit mt-8 mb-14'>
+    <div className='container mx-auto min-h-fit mt-9 mb-14'>
     
     <div className='grid md:grid-cols-2 lg:grid-cols-2'>
       
@@ -53,7 +53,7 @@ const onClick = () =>{
           <textarea className='border border-gray-300 focus:border-red-500 outline-none resize-none rounded w-full p-4 h-36 text-sm text-gray-400' placeholder='Message*' defaultValue='Hello, I am interested in [Modern apartment]' id='body' onKeyUp={()=> onClick()}></textarea>
           <div className="flex flex-col m-auto justify-center items-center">
           <label>-OR-</label>
-          <p className="text-sm text-gray-500">Message us directly at email@email.com</p>
+          <p className="text-sm text-gray-500">Message us directly at casareality@gmail.com</p>
           
           </div>
           <div className='flex gap-x-2'>
